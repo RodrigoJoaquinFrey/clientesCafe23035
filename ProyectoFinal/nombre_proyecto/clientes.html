@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Clientes Cafeteria 23035</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="clientes.css">
+    <link rel="icon" href="iconocafe.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+    <header id="header">
+        <div class="Header">
+            <div class="Titulo">
+                <h1 style="font-weight:600;">Café 23035</h1>
+            </div>
+            <div class="Subtitulo">
+                <h2 style="font-weight:600;">Desde hace más de 20 años</h2>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="app" class="container">
+            <h1 id="clientes">Clientes</h1>
+            <br>
+            <a  class="btn btn-primary" href="cliente_nuevo.html" id="botoncliente" style="font-size: 120%;">Nuevo cliente</a>
+            <br><br>
+            <div v-if="error">
+                <p>Lo sentimos, ha ocurrido un error ...</p>
+            </div>
+            <div v-else>
+                <section v-if="cargando">
+                    <div class="spinner-border"></div>
+                    <p>Cargando.....</p>
+                </section>
+                <section v-else>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="colorDatos">Id</th>
+                                    <th scope="col" class="colorDatos">Nombre</th>
+                                    <th scope="col" class="colorDatos">Telefono</th>
+                                    <th scope="col" class="colorDatos">DNI</th>
+                                    <th scope="col" class="colorDatos">Mail</th>
+                                    <th scope="col" class="colorDatos">Direccion</th>
+                                    <th scope="col" class="colorDatos">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class=""  v-for="cliente in clientes">
+                                    <td scope="row">{{cliente.id}}</td>
+                                    <td>{{cliente.nombre}}</td>
+                                    <td>{{cliente.telefono}}</td>
+                                    <td>{{cliente.dni}}</td>
+                                    <td>{{cliente.mail}}</td>
+                                    <td>{{cliente.direccion}}</td>
+                                    <td>
+                    			<a class="btn btn-primary" :href="'cliente_update.html?id='+ cliente.id" id="botoncliente">Editar</a>
+                                <button type="button" class="btn btn-danger" v-on:click="eliminar(cliente.id)" id="botoneliminar">Eliminar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="Footer">
+        </div>
+    </footer>
+    <script 
+Link de Bootstrap
+src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><!--Link de VUE-->
+    <script src="./js/clientes.js"></script>
+</body>
+</html>

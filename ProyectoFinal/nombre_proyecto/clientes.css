@@ -1,0 +1,84 @@
+*{
+    font-family: 'Alkatra', cursive;
+}
+
+  .Header {  display: grid;
+    grid-template-columns: 1fr 1fr 0.1fr 5fr 1fr;
+    grid-template-rows: 3fr 3fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Links Links Links Links Links"
+      ". Titulo Titulo Titulo ."
+      ". Subtitulo Subtitulo Subtitulo .";
+    background-image: url(img/tazas-capuccino-1600x900.webp);
+    background-position: center center;
+    background-size: cover;
+    padding: 15px;
+  }
+
+  .Footer {
+    grid-area: Footer;
+    text-align: center;
+    background-image: url(img/tazas-2.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 13%;
+    font-size: 17px;
+  }
+
+  .Titulo {
+    grid-area: Titulo;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 550;
+  }
+  
+  .Subtitulo {
+    grid-area: Subtitulo;
+    color: rgb(255, 255, 255);
+    text-align: center;
+  }
+
+  #botoncancelar{
+    background-color: red;
+    color: white;
+  }
+
+  .fondo{
+    background-image: url(img/tazas-2.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .fondo2{
+    background-image: url(img/tazas-capuccino-1600x900.webp);
+    background-position: center;
+    background-size: cover;
+  }
+
+  #botoncliente{
+    background-color:rgb(245, 171, 74);
+    border-color: black;
+    border-radius: 10px;
+    box-shadow: 2px 3px 0px 0px #899599;
+    margin:5px;
+  }
+
+  #botoneliminar{
+    border-color: black;
+    margin-right: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 3px 0px 0px #899599;
+    margin:5px;
+  }
+
+  .colorDatos{
+    color: rgb(116, 29, 29);
+  }
+
+  #clientes{
+    color: brown;
+    font-size: 300%;
+    font-weight: 550;
+  }
