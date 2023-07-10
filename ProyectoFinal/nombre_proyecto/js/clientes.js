@@ -80,12 +80,12 @@ createApp({
             }
             fetch(this.url, options)
                 .then(function () {
-                    alert("Registro grabado")
+                    alert("Cliente grabado")
                     window.location.href = "./clientes.html";
                 })
                 .catch(err => {
                     console.error(err);
-                    alert("Error al Grabarr")
+                    alert("Error al Grabar")
                 })
         }
     },
